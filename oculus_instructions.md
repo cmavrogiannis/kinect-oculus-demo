@@ -15,6 +15,7 @@ Baxter teleoperation demo.
    Screen 1 are present on the left side.
      If they are not, go to the screen config tab, set the Oculus to use a new X
      screen, save the X config, and restart the computer.
-5. With the Oculus on X Screen 1, run `run-oculus.sh` (a script in this 
+5. Install metacity, git, cmake, ninja-build, a C++ compiler, GLEW, GLFW, and OpenCV
+6. With the Oculus on X Screen 1, run `run-oculus.sh` (a script in this 
    directory). The script will start the Oculus service, configure the display, 
    and build and run the demo.
