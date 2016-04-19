@@ -4,7 +4,7 @@
 #include <thread>
 #include <mutex>
 
-int CAMERA_FOR_EYE[2] = { 2, 1 };
+int CAMERA_FOR_EYE[2] = { 0, 1 };
 
 struct CaptureData {
   ovrPosef pose;
@@ -151,6 +151,7 @@ public:
       mv.preMultiply(webcamDelta);
 
       mv.translate(glm::vec3(0, 0, -2.75));
+      mv.scale(4.0f);
       texture[getCurrentEye()]->Bind(TextureTarget::_2D); 
       oria::renderGeometry(videoGeometry[getCurrentEye()], program);
     });
